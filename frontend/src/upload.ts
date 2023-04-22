@@ -202,7 +202,7 @@ export class Upload {
                 throw "Aborted";
             }
 
-            if (etag !== "\"" + buf2hex(part.etag) + "\"") {
+            if ((this.server.implementation != "MinIO") && etag !== "\"" + buf2hex(part.etag) + "\"") {
                 throw "Checksum mismatch";
             }
         }
