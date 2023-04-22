@@ -8,6 +8,8 @@ export class Server {
     id: string = "";
     title: string = "";
 
+    implementation: string = "";
+
     part_size: number = 0;
     max_upload_size: number = 0;
 
